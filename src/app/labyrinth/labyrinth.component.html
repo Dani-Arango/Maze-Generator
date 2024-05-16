@@ -1,16 +1,25 @@
 <div>
   <div>
-    <h4>
-      Construction of a maze with Kruskal's Algorithm
-    </h4>
+    <h4>Construction of a maze with Kruskal's Algorithm.</h4>
+    <p>You can play using A W S D or the arrow keys. If you're on mobile, you can use the provided buttons.</p>
   </div>
   <div>
-     <button (click)="startGame()">Resetear</button>
+    <button (click)="startGame()">Reset</button>
   </div>
   <div>
-     <canvas width="615" #canvas height="615"></canvas>
+    <canvas width="615" #canvas height="615"></canvas>
   </div>
   @if(itsHome){
-    <div>!!You have reached the goal :D¡¡</div>
+  <div>¡¡You have reached the goal :D!!</div>
   }
+  <div class="hidden">
+    <div class="not-margin">
+      <button (click)="movePlayer(87)" class="button-play">^</button>
+    </div>
+    <div class="not-margin">
+      <button (click)="movePlayer(65)" class="button-play not-margin">&lt;</button>
+      <button (click)="movePlayer(83)" class="button-play not-margin">v</button>
+      <button (click)="movePlayer(68)" class="button-play not-margin">&gt;</button>
+    </div>
+  </div>
 </div>

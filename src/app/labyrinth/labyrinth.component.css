@@ -3,17 +3,27 @@ div {
   margin: 20px;
 }
 
-*{
+* {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h4 {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.hidden > div button {
+  font-size: 20px;
 }
 
 button {
   padding: 5px 10px;
-  margin-right: 5px;
   font-size: 16px;
   background-color: #4CAF50;
   color: white;
@@ -31,21 +41,39 @@ button:focus {
   outline: none;
 }
 
+.button-play {
+  color: white;
+  background-color: #4CAF50;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-margin {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
 canvas {
   display: block;
   margin: 20px auto;
+  width: 35vw;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 620px) {
   canvas {
-    transform: scale(0.7);
-    transform-origin: top;
+    width: 70vw;
   }
-}
 
-@media (max-width: 700px) {
-  canvas {
-    transform: scale(0.6);
-    transform-origin: top left;
+  .hidden {
+    display: block;
   }
 }
